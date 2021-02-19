@@ -1,0 +1,18 @@
+<h1 align="center">welcome</h1>
+<form method="POST" action="/"align='center'>{% csrf_token %}
+
+	{{form.title}}
+
+   <input type="submit" name="submit">
+	
+	
+</form>
+{% for loop in task %}
+
+	<p align="center">{{loop.title}}</p>
+		<a href="{% url 'updatetask' loop.id %} " >update	</a>
+		<a href="{% url 'deletetask' loop.id %}" > delete </a>
+
+		
+{% endfor%}
+

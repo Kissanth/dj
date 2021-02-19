@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Navigation Bar */
+.navbar{
+    padding: 20px 10px 20px 0px;
+    background-color: #28a7e9;
+    transition: all ease 0.4s;
+  }
+  .navbar-brand{
+    font-size: 22px;
+    color: white !important;
+  }
+  .navbar .navbar-nav li a{
+    font-size: 16px;
+    color: white;
+  }
+  
+  /* Animation */
+  .animate{
+    padding: 0px 10px 0px 0px;
+    transition: all ease 0.4s;
+  }
+  
+  /* Jumbotron */
+  .jumbotron{
+    margin-top: 110px;
+  }
+    </style>
+    <script>
+        // Toggle Animation by Class
+$(window).scroll(function(){
+    if($(document).scrollTop() > 100){
+      $('nav').addClass('animate');
+    }else{
+      $('nav').removeClass('animate');
+    }
+  })
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#resNav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand">Company Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="resNav">
+      <li><a href="/todo/">Todo</a></li>
+      <li><a href="#">blog</a></li>
+   <h2>Hello,{{request.user}}</h2>
+
+   <ul>
+       <li><a href="/logout/">logout</a></li>
+   </ul>
+    </div>
+  </nav>  <!-- End of Navigation Bar -->
+  
+  <!-- Jumbotron -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="jumbotron">
+          
+        </div>
+      </div>
+    </div>
+  </div>  <!-- End of Jumbotron -->
+  
+  <!-- Simple Article -->
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="text-center">
+  
+         
+        </div>
+      </div>
+    </div>
+  </div>  <!-- End of Simple Article -->
+</body>
+</html>
